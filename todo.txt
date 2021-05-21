@@ -1,0 +1,73 @@
+functionality
+- login
+- progressboard
+- game creation
+- game playing
+
+users
+-- learner --
+- play a game
+- select a game
+
+--- Release ---
+
+- get results
+- searching
+	- by topic
+	- ny name
+- option to login
+- save your progress
+- access progressboard
+
+-- contributors --
+- create a new game
+- edit a game
+
+--- Release ---
+
+- login
+- sign up
+
+
+---- Games ----
+-- Trivia --
+- type "trivia"
+- category "rocket science"
+- description
+- body
+- questions
+- answers
+- link to learn
+
+
+frontend
+    public/index.html
+        -will need to create/add our own favicon for later
+    src/App.js
+        -navBar
+    src/pages/mainPage/...
+        Main.js:
+            -About component
+                -About Rocket Appliance
+            -Content Box
+                -Left box:
+                    -Gallery(topleft)
+                    -Game description(bottomleft)
+                -Right box:
+                    -Search description
+                    -Search input    
+                    -Suggestion description 
+                    -Suggestion box
+                        -suggestion game logo
+                        -suggestion game description
+												
+backend
+		routes/
+				game // receives from client returns response from model/games
+						Use mongoose validation instead of findOne()
+
+		model/
+				db.js 
+						Deprecation Warning on collection.ensureIndex
+				games.js // speaks with db and returns for routes/game
+

@@ -1,0 +1,25 @@
+{
+	"name": "rocket-appliance",
+	"description": "",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"start": "concurrently \"cd backend && nodemon\" \"cd frontend && npm start\"",
+		"will": "concurrently \"npm i\" \"cd backend && npm i\" \"cd frontend && npm i\"",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/zohoorparvaz/project02.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/zohoorparvaz/project02/issues"
+	},
+	"homepage": "https://github.com/zohoorparvaz/project02#readme",
+	"dependencies": {
+		"concurrently": "^6.1.0"
+	}
+}

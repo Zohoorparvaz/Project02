@@ -48,6 +48,7 @@ export default function TriviaForm(props) {
 											defaultValue=""
 										/>
 										<button onClick={() => { onRemoveOption(optionIndex, questionIndex); }}>Delete</button>
+
 									</li>
 								))}
 							</ul>
@@ -64,6 +65,7 @@ export default function TriviaForm(props) {
 						New question
         </button>
 				</section>
+
 				<input type="submit" />
 			</form>
 		</>

@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import LeftBox from './leftBox/LeftBox';
 import RightBox from './rightBox/RightBox';
+import styles from '../../../../app.module.css';
 
 export default function ContentBox(props) {
 	const { setPagePointer } = props;
 	const [gameList, setGameList] = useState();
+	const [hoverOnCard, setHoverOnCard] = useState(false); //temporary false value for hovering over game cards
+	const [gameHovered, setGameHovered] = useState();
+
 
 	//
 	// fetching game cards form server
@@ -19,9 +23,14 @@ export default function ContentBox(props) {
 		fetchData();
 	}, []);
 
+	function handleHover(name) {
+		setHoverOnCard(true);
+		setGameHovered(gameList.find(game => game.name === name));
+	}
+
 	return (
-		<div className="content-box">
-			<LeftBox setPagePointer={setPagePointer} gameList={gameList} />
+		<div className={styles["content-box"]}>
+			<LeftBox hoverOnCard={hoverOnCard} gameHovered={gameHovered} onMouseEnter={handleHover} setPagePointer={setPagePointer} gameList={gameList} />
 			<RightBox setPagePointer={setPagePointer} gameList={gameList} />
 		</div>
 	);

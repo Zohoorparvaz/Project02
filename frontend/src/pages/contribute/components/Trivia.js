@@ -12,15 +12,17 @@ export default function Trivia() {
     description: "",
     questions: []
   };
-
   const [data, setData] = useState(INITIAL_DATA);
   const [messageOnCreate, setMessageOnCreate] = useState("");
+  const { watch } = useForm();
+  const at = watch("at", 2);
 
   const handleInsertQuestion = () => {
     let prevData = { ...data };
     prevData.questions = [...data.questions, { id: id(), options: [], link: "" }];
     setData(prevData);
   };
+
 
   const handleInsertOption = (questionIndex) => {
     let prevData = { ...data };
@@ -81,6 +83,7 @@ export default function Trivia() {
         setMessageOnCreate(`Fail to create the game! Try again!`);
       });
   }
+
   return (
     <>
       <TriviaForm onSubmit={onSubmit} onChangeInfo={handleInfoChange} onRemoveQuestion={handleRemoveQuestion} onChangeLink={handleLinkChange} onRemoveOption={handleRemoveOption} onInsertOption={handleInsertOption} onInsertQuestion={handleInsertQuestion} data={data} />

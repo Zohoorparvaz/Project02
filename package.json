@@ -10,15 +10,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/zohoorparvaz/project02.git"
+		"url": "git+https://github.com/cloutierMat/rocket-appliance.git"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/zohoorparvaz/project02/issues"
+		"url": "https://github.com/cloutierMat/rocket-appliance/issues"
 	},
-	"homepage": "https://github.com/zohoorparvaz/project02#readme",
+	"homepage": "https://github.com/cloutierMat/rocket-appliance#readme",
 	"dependencies": {
 		"concurrently": "^6.1.0"
 	}
